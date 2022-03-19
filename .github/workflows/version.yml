@@ -1,0 +1,19 @@
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+name: CICD on master branch
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: run deploy
+        run: |
+          echo "run deploy"

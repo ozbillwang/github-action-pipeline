@@ -1,7 +1,8 @@
 on:
-  workflow_test
-    workflow: ["test"]
-    types: [requested]
+  push:
+    branches-ignore:
+      - master
+      - dev
 
 name: CICD
 

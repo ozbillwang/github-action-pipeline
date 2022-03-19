@@ -28,13 +28,13 @@ jobs:
         run: |
           echo "run build"
 
-  deploy:
-    name: Deploy
+  version:
+    name: version
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: run deploy
+      - name: run version
         run: |
-          echo "run deploy"
+          echo "run version"
