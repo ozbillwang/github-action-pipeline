@@ -15,7 +15,7 @@ jobs:
         run: echo "run test"
 
   build:
-    name: build
+    name: build-1.0.${{github.run_number}}
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -49,4 +49,4 @@ jobs:
       - name: run deploy
         run: |
           echo "run deploy"
-          docker run -ti --rm ozbillwang/hello-world:dev-1.0.${{github.run_number}}
+          docker run -i --rm ozbillwang/hello-world:dev-1.0.${{github.run_number}}
