@@ -10,29 +10,8 @@ jobs:
   test:
     name: test
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - run: |
         echo "run test"
-
-  build:
-    name: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - run: |
-        echo "run build"
-
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - run: |
-        echo "run deploy"
