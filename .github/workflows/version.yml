@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: run deploy
+      - name: run production deploy
         run: |
-          echo "run deploy"
+          echo "run production deploy"
