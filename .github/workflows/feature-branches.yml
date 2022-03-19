@@ -4,7 +4,7 @@ on:
       - master
       - dev
 
-name: CICD
+name: CICD at feature branches
 
 jobs:
   test:
