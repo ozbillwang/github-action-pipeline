@@ -3,6 +3,10 @@ on:
     branches-ignore:
       - master
       - dev
+  pull_request:
+    branches:
+      - master
+      - dev
 
 name: CICD at feature branches
 
