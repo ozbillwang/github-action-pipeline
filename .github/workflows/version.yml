@@ -1,15 +1,15 @@
+name: CICD on version deploy
+
 on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
 
-name: CICD on versioning
-
 jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    # if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
         uses: actions/checkout@v2

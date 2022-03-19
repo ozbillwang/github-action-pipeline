@@ -1,8 +1,8 @@
+name: CICD on master branch
+
 on:
   push:
     branches: [master]
-
-name: CICD on master branch
 
 jobs:
   test:
@@ -15,7 +15,7 @@ jobs:
         run: echo "run test"
 
   build:
-    name: build
+    name: build-1.0.${{github.run_number}}
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -24,6 +24,20 @@ jobs:
       - name: run build
         run: |
           echo "run build"
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ozbillwang/hello-world:1.0.${{github.run_number}}
 
   version:
     name: version
