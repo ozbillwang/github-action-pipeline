@@ -1,7 +1,7 @@
 # github-action-pipeline
 Sample to manage the releaess with Github Action
 
-# Pipelines with several stage
+# Pipelines with several stages
 
 Suppose we have two main branches, `dev` and `master`
 
