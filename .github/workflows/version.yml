@@ -14,5 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: run production deploy
+        if: github.event.review.state == 'approved'
         run: |
           echo "run production deploy"
