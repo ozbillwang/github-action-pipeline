@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    name: deploy-prod-1.0.${{github.run_number}}
+    name: deploy-prod
     runs-on: ubuntu-latest
     # if: github.ref == 'refs/heads/master'
     steps:

@@ -15,7 +15,7 @@ jobs:
         run: echo "run test"
 
   build:
-    name: build-1.0.${{github.run_number}}
+    name: build-prod
     runs-on: ubuntu-latest
     needs: test
     steps:
