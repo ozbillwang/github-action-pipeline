@@ -9,6 +9,7 @@ jobs:
   deploy:
     name: deploy-prod
     runs-on: ubuntu-latest
+    environment: production
     # if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout
